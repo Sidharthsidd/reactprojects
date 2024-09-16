@@ -24,7 +24,7 @@ function App() {
 
 const passwordcopyfunc=useCallback(()=>{
   passwordref.current?.select()
-  alert("copied")
+  alert("copied to clipboard")
   window.navigator.clipboard.writeText(password)
 },[password])
   useEffect(()=>{
@@ -51,6 +51,7 @@ const passwordcopyfunc=useCallback(()=>{
           <input type="checkbox" defaultChecked={charallowed} id ="charInput" onChange={()=>{setcharallowed((prev)=>!prev)}}></input>
         <label htmlFor="charInput">character</label>
         </div>
+        <input type="text" />
       </div>
     </div>
     </>
